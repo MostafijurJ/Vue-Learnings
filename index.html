@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learn Vue JS</title>
+        <script src="vue.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" >
+        <body>
+            <div id="app">
+                <div class="container">
+                    <h1>{{message}}</h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Type Something Here: </h3>
+                            <textarea class="form-control" v-model="message"></textarea>
+                            <br>
+                            <p>{{message}}</p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <h3 class="text-center">Fruits Checking</h3>
+                            <span v-for="fruit in options" ::key="fruit">
+                                <input type="checkbox" v-model="fruits" 
+                                :id="fruit.value" :value="fruit.value" type="checkbox">
+                                <label :for="fruit.value">{{fruit.text}}</label>
+                                {{fruit.name}}  
+                                </span>
+
+                            <br>
+                            <p>Your clicked Fruits List is : {{fruits}}</p>
+                        </div>
+                    </div>
+                 </div>    
+            </div>
+            <script src="app.js"></script>
+        </body>
+    </head>
+</html>

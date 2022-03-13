@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!',
+        message: 'Type something here!',
         fruits: [],
         options: [
             { value: 'Apple', text: 'Apple' },
@@ -11,11 +11,8 @@ const app = new Vue({
             { value: 'Pineapple', text: 'Pineapple' },
             { value: 'Strawberry', text: 'Strawberry' }
         ],
-        methods: {  },
-        func: () => {
-        console.log('Hello World');
-        return "Hello From Func";
-        },
+        vModelCheck: 'I know you are Learning <a href="https://www.google.com/search?q=vuejs" target="_blank">VueJS</a>',
+        arrayManipulation: [5,6],
     arrayCheck: () => {
     console.log("hello from array check");
     return 'Hello From Array Check';

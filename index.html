@@ -10,7 +10,6 @@
         <body>
             <div id="app">
                 <div class="container">
-                    <h1>{{message}}</h1>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -33,8 +32,24 @@
                             <br>
                             <p v-if="fruits.length">Your clicked Fruits List is : {{fruits}}</p>
                         </div>
+                        <div class="col-md-12">
+                            <h3 class="text-center">V-Html</h3>
+                            <p v-html="vModelCheck"></p>
+                            <!-- <p v-text="vModelCheck"></p> -->
+                            <!-- <p><input v-model="vModelCheck"></p> -->
+                        </div>
+                        
+                        <div class="col-md-12">
+                          <input v-model.number="arrayManipulation[0]" type="number">
+                            <span>+</span>
+                        <input v-model.number="arrayManipulation[1]" type="number">
+                            <span>=</span>
+                            <span>{{arrayManipulation[0] + arrayManipulation[1]}}</span>
+                        </div>
+
                     </div>
-                 </div>    
+                 </div>
+
             </div>
             <script src="app.js"></script>
         </body>
